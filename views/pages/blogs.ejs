@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+    <body class="container">
+        <div class="center mb-mid">
+            <a href="blog/<%= blogs[0].id %>">
+                <img src="img<%= blogs[0].url %>" alt="">
+            </a>
+            <h1 class="max-75">
+                <%= blogs[0].title %>
+            </h1>
+        </div>
+        <% blogs.forEach(blog=> { %>
+            <% if (blog.id !==0) { %>
+                <div class="center mb-mid">
+                    <a href="blog/<%= blog.id %>">
+                        <img src="img<%= blog.url %>" alt="">
+                    </a>
+                    <h3 class="max-75">
+                        <%= blog.title %>
+                    </h3>
+                </div>
+                <% } %>
+                    <% }) %>
+    </body>
+
+</html>

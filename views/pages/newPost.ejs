@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+    <body>
+        <h1>Add new Post</h1>
+        <form action="/addNewPost" method="POST">
+            <input type="text" name="blogTitle" id="blogTitle" placeholder="Title">
+            <input type="text" name="blogPictureUrl" id="blogPictureUrl" placeholder="Picture Url">
+            <input type="text" name="blogAuthor" id="blogAuthor" placeholder="Author">
+            <input type="text" name="blogAuthorPicture" id="blogAuthorPicture" placeholder="Author picture">
+            <textarea name="textarea" name="blogBody" id="blogBody" cols="30" rows="10"
+                placeholder="Write your Article here..."></textarea>
+            <input type="submit" value="Save article">
+        </form>
+    </body>
+
+</html>
